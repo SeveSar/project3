@@ -230,8 +230,12 @@
         line-height: 27px;
     }
 
-    
-    .feed-form {
+    .title.title_left{
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .feed-form:not(#consultation-form) {
             width: 250px;
             margin-top: 20px;
             input {
@@ -239,7 +243,11 @@
             }
             
     }
-    
+    .carousel{
+        .slick-track{
+            width: 100%;
+        }
+    }
     .comment{
         &__description{
             width: 320px;
@@ -266,7 +274,15 @@
             font-size: 32px
         }
     }
-
+    .consultation{
+        min-height: 636px;
+        padding: 61px 0 79px 0;
+        &__descr{
+            font-size: 16px;
+            margin-top: 49px;
+            line-height: 22px;
+        }
+    }
     .footer{
         &__content{
             width: 261px;
@@ -283,8 +299,6 @@
         }
     }
     .pageup{
-        bottom: auto;
-        right: auto;
         bottom: 18px;
         right: 12px;
         img{
