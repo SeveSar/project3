@@ -137,102 +137,160 @@
             text-align: center;
             font-size: 17px;
         }
+
         &__text {
             text-align: center;
             font-size: 14px;
             line-height: 21px;
         }
-        
+
+
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        &__official {
+            display: none;
+        }
+
+        &__logo {
+            width: 143px;
+        }
+
+        &__phone {
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+
+    .button {
+        width: 104px;
+
+        &_main {
+            width: 147px;
+            height: 35px;
+        }
+
+        &_submit {
+            width: 100%;
+            height: 55px;
+            font-size: 16px;
+        }
+
+        &_mini {
+            width: 131px;
+            height: 40px;
+            font-size: 14px;
+        }
 
     }
 
-    @media (max-width: 575px) {
-        .header {
-            &__official {
-                display: none;
-            }
+    .promo {
+        min-height: auto;
+        padding-bottom: 25px;
 
-            &__logo {
-                width: 143px;
-            }
-
-            &__phone {
-                font-size: 10px;
-                line-height: 10px;
-            }
+        &__wrapper {
+            align-items: center;
+            margin-top: 40px;
         }
 
-        .button {
-            width: 104px;
+        &__header {
+            font-size: 23px;
+            line-height: 23px;
 
-            &_main {
-                width: 147px;
-                height: 35px;
-            }
-
-            &_submit {
-                width: 100%;
-                height: 55px;
-                font-size: 16px;
-            }
-
-            &_mini {
-                width: 131px;
-                height: 40px;
-                font-size: 14px;
-            }
 
         }
 
-        .promo {
-            min-height: auto;
-            padding-bottom: 25px;
+        &__subheader {
 
-            &__wrapper {
-                align-items: center;
-                margin-top: 40px;
-            }
-
-            &__header {
-                font-size: 23px;
-                line-height: 23px;
-
-
-            }
-
-            &__subheader {
-
-                font-size: 13px;
-                line-height: 13px;
-                margin-top: 12px;
-            }
-
-            &__icons {
-                width: 317px;
-
-            }
-
-            &__icon {
-                font-size: 10px;
-
-                img {
-                    width: 35px;
-                }
-            }
+            font-size: 13px;
+            line-height: 13px;
+            margin-top: 12px;
         }
 
+        &__icons {
+            width: 317px;
 
-
-        .title {
-            font-size: 24px;
-            line-height: 27px;
         }
 
-        .consultation {
-            .feed-form {
-                width: 290px;
+        &__icon {
+            font-size: 10px;
+
+            img {
+                width: 35px;
             }
         }
-
     }
+
+
+
+    .title {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    
+    .feed-form {
+            width: 250px;
+            margin-top: 20px;
+            input {
+                margin-bottom: 11px;
+            }
+            
+    }
+    
+    .comment{
+        &__description{
+            width: 320px;
+        }
+        &__subtitle{
+            font-size: 15px;
+        }
+        &__text{
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+    .modal:not(.modal_mini) {
+        transform: translate(-54%, -50%);
+        padding: 9px 10px 10px 10px;
+        min-width: 0px;
+        width: 271px;
+        min-height: 393px;
+        label.error{
+            margin-bottom: 10px;
+        }
+        &__close{
+            right: -27px;
+            font-size: 32px
+        }
+    }
+
+    .footer{
+        &__content{
+            width: 261px;
+            height: 216px;
+            padding: 32px 0 7px 0;
+
+        }
+        &__subtitle{
+            font-size: 17px;
+        }
+        &__phone{
+            font-size: 17px;
+            margin-top: 23px;
+        }
+    }
+    .pageup{
+        bottom: auto;
+        right: auto;
+        bottom: 18px;
+        right: 12px;
+        img{
+            width: 80%;
+
+        }
+    }
+
 }
