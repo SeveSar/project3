@@ -1,0 +1,92 @@
+@import "base/variables";
+@import "base/animations";
+
+* {
+    font-family: "MuseoSansCyrl", sans-serif;
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+
+.container{
+    max-width: 980px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: #0d0d0d;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+
+    &_left{
+        text-align: left;
+        font-size: 36px;
+        line-height: 42px;
+        color: #ffffff;
+        margin: 0;
+    }
+}
+
+.tabs{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+        .tab {
+            width: 220px;
+            height: 50px;
+            margin: 0 5px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 50px;
+            border: solid 2px #d0d0d0;
+            color: #6b6b6b;
+            transform: skewX(-20deg);
+            cursor: pointer;
+            transition: all .5s;
+            
+            div {
+                transform: skewX(20deg);
+            }
+            &:not(.tab_active):hover{
+                // background-color: rgba(199,1,1,.6);
+                box-shadow: 3px 3px 20px #c70101;
+                border: none;
+            }
+            
+            &_active{
+                background-color: rgb(199, 1, 1);
+                color: #ffffff;
+                border: none;
+            }
+        }
+    }
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+@import "blocks/advantages";
+@import "blocks/consultation";
+@import "blocks/forms";
+@import "blocks/carousel";
+@import "blocks/catalog";
+@import "blocks/comment";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/media";
+@import "blocks/pageup";
