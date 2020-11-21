@@ -107,6 +107,12 @@ $(document).ready(function () {
     $(".overlay, #consultation, #order, #thanks").fadeOut(500);
   });
 
+  // $('.overlay').on('click', function(event) {
+  //   if (event.target.classList.contains('overlay')){
+  //     $('.overlay, #consultation, #order, #thanks').fadeOut(500);
+  //   }
+  // });
+
   $(".button_mini").each(function (i) {
     $(this).on("click", function () {
       $("#order .modal__descr").text($(".catalog-item__subtitle").eq(i).text());
