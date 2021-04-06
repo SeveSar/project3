@@ -8,26 +8,26 @@ for (i = 0; i < tabsALL.length; i++) {
   tabsALL[i].setAttribute("data-tab", i + 1);
 }
 // TABS WITH JS ONLY
-for (i of tab) {
-  i.addEventListener("click", function (event) {
-    if (!event.currentTarget.classList.contains("tab_active")) {
-      let dataTab = this.getAttribute("data-tab"),
-        content = document.querySelector('.catalog__content[data-tab="' + dataTab + '"]');
+// for (i of tab) {
+//   i.addEventListener("click", function (event) {
+//     if (!event.currentTarget.classList.contains("tab_active")) {
+//       let dataTab = this.getAttribute("data-tab"),
+//         content = document.querySelector('.catalog__content[data-tab="' + dataTab + '"]');
 
-      let activeTab = document.querySelector("li.tab_active");
-      let activeContent = document.querySelector("div.catalog__content_active");
+//       let activeTab = document.querySelector("li.tab_active");
+//       let activeContent = document.querySelector("div.catalog__content_active");
 
-      activeTab.classList.remove("tab_active");
-      this.classList.add("tab_active");
+//       activeTab.classList.remove("tab_active");
+//       this.classList.add("tab_active");
 
-      activeContent.classList.remove("catalog__content_active");
-      content.classList.add("catalog__content_active");
-    }
-  });
-}
+//       activeContent.classList.remove("catalog__content_active");
+//       content.classList.add("catalog__content_active");
+//     }
+//   });
+// }
 
 $(document).ready(function () {
-  // ВаРИАНТ УЧИТЕЛЯ С БИБЛЕОТЕКОЙ
+  // ВаРИАНТ УЧИТЕЛЯ С БИБЛИОТЕКОЙ
 
   $(".carousel__inner").slick({
     speed: 1000,
@@ -43,16 +43,17 @@ $(document).ready(function () {
         settings: {
           dots: true,
           arrows: false,
-          
+
         },
       },
     ],
   });
-  
+
 // TABI JQUERY
-  // $("ul.tabs").on("click", "li:not(.tab_active)", function () {
-  //   $(this).addClass("tab_active").siblings().removeClass("tab_active");
-  // });
+  $("ul.tabs").on("click", "li:not(.tab_active)", function () {
+    $(this).addClass("tab_active").siblings().removeClass("tab_active").closest('div.container').find('.catalog__content')
+    .removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+  });
 
   // $("[data-action='jsFurtherGo']").on('click', function(event){
   //   event.preventDefault();
@@ -64,7 +65,7 @@ $(document).ready(function () {
   //   $(this).closest('ul.catalog__list').removeClass('catalog__list_active').closest('div.catalog__wrapper').find('.catalog-item__content').addClass('catalog-item__content_active');
   // });
 
-  // 
+  //
   function toggleSlide(item) {
     $(item).each(function (i) {
       $(this).on("click", function (event) {
@@ -119,7 +120,7 @@ $(document).ready(function () {
       $(".overlay, #order").fadeIn(500);
     });
   });
-  
+
 
   // fixed header
   let promoH = $(".promo").innerHeight();
@@ -131,7 +132,7 @@ $(document).ready(function () {
     scrollCheck(promoH, scrollTop);
   });
 
-  
+
   function scrollCheck(promoH, scrollTop) {
     if (scrollTop >= promoH) {
       $(".header").addClass("fixed");
@@ -226,7 +227,7 @@ $(document).ready(function () {
   //     let subTitleCatalogItem = this.closest('.catalog-item').querySelector('.catalog-item__subtitle').textContent;
   //     order.querySelector('.modal__descr').textContent = subTitleCatalogItem;
   //     order.style.display = 'block';
-      
+
   //   });
   // }
 // МОЙ ВАРИК
